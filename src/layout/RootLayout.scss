@@ -1,0 +1,9 @@
+
+
+.page-container {
+    display: flex;
+
+    .right-content-container {
+        flex-grow: 1;
+    }
+}

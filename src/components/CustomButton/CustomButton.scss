@@ -1,0 +1,47 @@
+@import "../../style/style.scss";
+
+.custom-button {
+    cursor: pointer;
+    @include styleButton(transparent,$color-orange-primary, 8px, 12px, 5px);
+    color: white;
+
+    &.full-width {
+        width: 100%;
+    }
+
+    &.half-width {
+        width: 50%;
+    }
+
+
+    &.no-border {
+        border: none;
+    }
+
+    &.no-radius {
+        border-radius: 0px;
+    }
+
+    &:hover {
+        @include btnHover($color-white, $color-orange-primary, $color-white);
+    }
+
+    // &.hasBg {
+    //     background-color: $color-orange-primary;
+    //     &:hover {
+    //         box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    //     }
+    // }
+
+    // &.danger-btn {
+    //     background-color: $color-pink-dark;
+    //     border: none;
+    //     &:hover {
+    //         box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    //     }
+    // }
+
+    &.form-icon-btn {
+        border: none;
+    }
+} 

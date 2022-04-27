@@ -1,0 +1,37 @@
+@import "./mixins";
+@import "./variable";
+@import "./reset";
+
+
+.my-container {
+    @include biggerdesktop {
+        @include custom_container($bigger-desktop-width);
+    }
+    @include desktop {
+        @include custom_container($desktop-width);
+    }
+    @include desktop {
+        @include custom_container($desktop-width);
+    }
+
+    @include tablet {
+        @include custom_container($tablet-width);
+    }
+
+    @include mobile {
+        @include custom_container($mobile-width);
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-blue {
+    color: $color-orange-primary;
+}
+

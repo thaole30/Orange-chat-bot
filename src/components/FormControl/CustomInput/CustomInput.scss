@@ -1,0 +1,49 @@
+@import "../../../style/style.scss";
+
+.custom-input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @include marginY(10px);
+
+    &.halfWidth {
+        width: 50%;
+    }
+
+    span {
+        position: relative;
+        .custom-input {
+            padding: 8px 24px;
+            width: 100%;
+            border: 1px solid $color-orange-primary;
+            border-radius: 5px;
+            &:focus {
+                outline: none !important;
+                border: 1px solid $color-orange-primary;
+                box-shadow: 2px 0 5px #f9a9a9;
+            }
+            color: $color-orange-primary !important;
+        }
+
+        &.input-wrap {
+            .form-icon-btn {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: transparent;
+                padding: 4px;
+               
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    
+
+    }
+
+}
+

@@ -1,0 +1,53 @@
+@import "../../style//style.scss";
+
+.auth-form-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f0f0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+
+    .logo-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 12px 18px 28px 18px;
+        position: relative;
+       
+        .logo-orange {
+            margin-right: 14px;
+        }
+        .chat-icon {
+            position: absolute;
+            top: 2px;
+            left: 32px;
+        }
+        .logo-text {
+            color: $color-orange-primary;
+        }
+    }
+
+
+    .auth-form {
+        width: 500px;
+        height: 300px;
+        background: $color-white;
+        padding: 24px;
+
+        .bonus-content {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            align-items: center;
+
+            .left {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

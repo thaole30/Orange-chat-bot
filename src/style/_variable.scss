@@ -1,0 +1,44 @@
+
+$color-orange-primary: #FA8C16;
+$color-neutral-4: #F0F0F0;
+$color-white: white;
+
+$mobile-width: 768px;
+$tablet-width: 992px;
+$desktop-width: 1600px;
+$bigger-desktop-width: 2000px;
+
+
+
+//spacing
+$sp-em: 1em;
+$sp-rem: 1rem;
+$sp-5: 5px;
+$sp-half: 7.5px;
+$sp-10: 10px;
+$sp-15: 15px;
+$sp-20: 20px;
+$sp-25: 25px;
+$sp-35: 35px;
+$sp-60: 60px;
+$sp-120: 120px;
+
+//border-radius
+$border-radius: 5px;
+
+//font-size
+$fs-12: 12px;
+$fs-14: 14px; //default
+$fs-16: 16px;
+$fs-18: 18px;
+$fs-20: 20px;
+$fs-24: 24px;
+$fs-32: 32px;
+
+
+$color-login: linear-gradient(
+  180deg,
+  rgba(20, 50, 93, 0.9),
+  rgba(8, 22, 48, 0.9)
+);
+$color-button: #1aafcd;
