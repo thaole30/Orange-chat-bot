@@ -1,11 +1,25 @@
 import React from 'react'
-import SharedForm from './SharedForm'
+import AntdInput from '../../components/FormControl/AntdInput/AntdInput';
+import SharedForm from './SharedForm';
 
 const EditForm = () => {
   return (
-    <div>
-        <SharedForm isEditable={true}/>
-    </div>
+    <>
+        <SharedForm isEditable={true}>
+          <div className="new-password-inputs">
+            <AntdInput
+              type="password"
+              disabled={false}
+              style={{marginTop: '8px'}}
+            />
+            <AntdInput
+              type="password"
+              disabled={false}
+              style={{marginTop: '8px'}}
+            />
+          </div>
+        </SharedForm>
+    </>
   )
 }
 

@@ -5,11 +5,11 @@ import CustomButton from '../../CustomButton/CustomButton';
 
 
 
-const CustomInput = ({label, name, type="text", addedClass ='', half = false, value, placeholder,...props}) => {
+const CustomInput = ({functionality, label, name, type="text", addedClass ='', half = false, value, placeholder,...props}) => {
 
   // console.log("handleChange in custom input", props.handleChange);
   return (
-      <div className={`custom-input-container ${half && 'halfWidth'}`}>
+      <div className={`custom-input-container ${half && 'halfWidth'} ${functionality}`}>
         {label && <label htmlFor={name}>{label}</label>}
         <span className={props.isIcon ? "input-wrap" : ""}>
           <input

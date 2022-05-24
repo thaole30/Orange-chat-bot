@@ -1,0 +1,93 @@
+@import "../../style/style.scss";
+
+
+.posts-setting-page {
+    display: flex;
+    height: fit-content;
+    gap: 24px;
+    .posts-list {
+        width: 370px;
+        background-color: $color-white;
+        
+        .no-posts-container {
+            padding: 40px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .no-posts-content {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                img {
+                    width:200px;
+                    height:200px;
+                }
+            }
+
+
+            button {
+                margin-top: auto;
+                img {
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+        }
+
+        .have-posts-container {
+            padding: 16px;
+
+            table.posts-table {
+                width: 100%;
+                th {
+                    background-color: #FAFAFA;
+                }
+                td, th {
+                    padding: 13px 16px;
+                }
+                tr {
+                    text-align: center;
+                    border-bottom: 1px solid #ddd;
+                    &:hover {
+                        background-color: $color-neutral-5;
+                    }
+                }
+            }
+        }
+    }
+
+    .post-editor-container {
+        flex: 1;
+        background-color: $color-white;
+        padding: 16px;
+        height: 700px;
+
+        .top-editor {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .empty-box {
+            border: 2px solid #eee;
+            border-radius: 10px;
+            color: #999999;
+            padding: 16px;
+        }
+        .create-editor {
+            .tox.tox-tinymce {
+                height: 100% !important;
+            }
+        }
+        .btn-actions-wrapper {
+            .edit-section-btn-wrapper {
+                button {
+                    width: 120px;
+                }
+            }
+        }
+    }
+}

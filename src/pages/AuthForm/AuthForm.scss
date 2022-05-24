@@ -28,25 +28,36 @@
         }
         .logo-text {
             color: $color-orange-primary;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 48px;
         }
     }
 
 
     .auth-form {
-        width: 500px;
-        height: 300px;
+        width: 400px;
         background: $color-white;
         padding: 24px;
+
+        .auth-form-input {
+            margin-bottom: 28px;
+        }
 
         .bonus-content {
             display: flex;
             justify-content: space-between;
             font-size: 14px;
             align-items: center;
+            @include marginY(1rem);
 
             .left {
                 display: flex;
                 align-items: center;
+            }
+
+            .right {
+                color: $color-blue;
             }
         }
     }

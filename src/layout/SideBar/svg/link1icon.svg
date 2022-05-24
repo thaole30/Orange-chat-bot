@@ -1,9 +1,4 @@
-import React from "react";
-
-const Link1Icon = () => {
-  return (
-    <span>
-      <svg
+     <svg
         width="20px"
         height="20px"
         viewBox="0 0 16 21"
@@ -15,8 +10,3 @@ const Link1Icon = () => {
           fill="black"
         />
       </svg>
-    </span>
-  );
-};
-
-export default Link1Icon;

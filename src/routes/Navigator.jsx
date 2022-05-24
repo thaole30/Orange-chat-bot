@@ -4,9 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import RootLayout from '../layout/RootLayout';
 import DefaultPage from '../pages/DefaultPage';
 import FilePage from '../pages/FilePage/FilePage';
-import EditForm from '../pages/UserProfilePage/EditForm';
 import UserProfilePage from '../pages/UserProfilePage/UserProfilePage';
-import DisplayForm from './../pages/UserProfilePage/DisplayForm';
 import SettingChatboxPage from './../pages/SettingChatboxPage/SettingChatboxPage';
 import DisplayTextEditor from '../pages/PostsSettingPage/DisplayTextEditor';
 import EditTextEditor from '../pages/PostsSettingPage/EditTextEditor';
@@ -19,6 +17,9 @@ import GraphScenario from '../pages/Chart/GraphScenario';
 import GraphCommunicate from '../pages/Chart/GraphCommunicate';
 import Scenario from '../pages/Chart/Scenario';
 import AuthForm from '../pages/AuthForm/AuthForm';
+import DisplayForm from '../pages/UserProfilePage/DisplayForm';
+import EditForm from '../pages/UserProfilePage/EditForm';
+import CreateTextEditor from '../pages/PostsSettingPage/CreateTextEditor';
 
 
 
@@ -43,7 +44,8 @@ const Navigator = () => {
 
             <Route path="posts-setting" element={<PostsSettingPage />}>
                 <Route index element={<DisplayTextEditor/>} />
-                <Route path="edit"element={<EditTextEditor/>} />
+                <Route path="create"element={<CreateTextEditor/>} />
+                <Route path="edit/:postId"element={<EditTextEditor/>} />
             </Route>
 
 
@@ -53,9 +55,10 @@ const Navigator = () => {
             </Route>
 
             <Route path="chart" element={<ChartPage />}>
+                <Route index element={<Navigate to="/chart/scenario" replace />} />
                 <Route path="scenario" element={<Scenario/>} />
-                <Route path="communicate"element={<GraphCommunicate/>} />
-                <Route path="graph-scenario"element={<GraphScenario/>} />
+                <Route path="dialogue"element={<GraphCommunicate/>} />
+                <Route path="graph/table"element={<GraphScenario/>} />
             </Route>
 
           </Route>

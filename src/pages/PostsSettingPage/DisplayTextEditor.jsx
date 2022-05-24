@@ -3,10 +3,11 @@ import SharedTextEditor from './SharedTextEditor'
 
 const DisplayTextEditor = () => {
   return (
-    <div>
-        <SharedTextEditor/>
-        DisplayTextEditor
-    </div>
+    <SharedTextEditor>
+      <div className="empty-box f-center f-1">
+          <p>現在、この投稿のコンテンツはありません</p>
+      </div>
+    </SharedTextEditor>
   )
 }
 

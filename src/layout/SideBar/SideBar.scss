@@ -4,13 +4,17 @@
 
 
 .sidebar-container {
+    display: flex;
+    flex-direction: column;
     background: $color-white;
-    flex-basis: 235px;
+    width: 235px;
     height: 100vh;
     padding: 20px 0;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+
+    transition: all 0.5s ease-in-out;
 
     .logo-container {
         position: relative;
@@ -20,7 +24,7 @@
         position: relative;
         .trapezoid {
             position: absolute;
-            left: 100%;
+            left: 98%;
             cursor: pointer;
         }
         .logo-orange {
@@ -35,6 +39,24 @@
             color: $color-orange-primary;
         }
     }
+
+    .sidebar-toggle {
+        right: -15px;
+        top: 10px;
+        content: "";
+        width: 0px;
+        height: 48px;
+        border-bottom: 10px solid transparent;
+        border-top: 10px solid transparent;
+        border-left: 15px solid white;  
+        filter: drop-shadow(4px 0 2px rgba(0, 0, 0, 0.15));
+        cursor: pointer;
+        .sidebar-toggle-icon {
+            position: absolute;
+            left: -13px;
+        }
+    }
+    
 
     .links-list {
         .link-item {
@@ -61,6 +83,59 @@
                 .orange-stick {
                     display: block;
                 }
+            }
+
+            .down-arrow {
+                right: 10px;
+            }
+        }
+        .child-links-list {
+            background-color: #FAFAFA;
+            span:nth-child(1) {
+                margin-left: 20px;
+            }
+            span:nth-child(2) {
+                margin: 0;
+            }
+            .child-link-active {
+                span {
+                    color: $color-orange-primary;
+                }
+            }
+        }
+    }
+
+    .user-logout {
+        margin-top: auto;
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            display: flex;
+            align-items: center;
+            img {
+                width: 30px;
+                height: 30px;
+            }
+           
+        }
+        .right {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+
+    &.fade {
+        width: 70px;
+        .text-link, .logo-text {
+            display: none;
+        }
+        .user-logout {
+            .user-name, .right {
+                display: none;
             }
         }
     }

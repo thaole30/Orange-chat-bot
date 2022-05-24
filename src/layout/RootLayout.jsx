@@ -11,7 +11,9 @@ const RootLayout = () => {
         <SideBar />
         <div className="right-content-container">
           <Header/>
-          <Outlet />
+          <div className="right-main-content">
+            <Outlet />
+          </div>
         </div>
       </div>
     ),

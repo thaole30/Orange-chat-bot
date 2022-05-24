@@ -1,9 +1,18 @@
-
+@import "../style//style.scss";
 
 .page-container {
     display: flex;
 
     .right-content-container {
         flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        .right-main-content {
+            flex-grow: 1;
+            padding: 48px 40px;
+            background-color: $color-neutral-4;
+            overflow-y: scroll;
+        }
     }
 }

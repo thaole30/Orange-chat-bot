@@ -1,0 +1,11 @@
+@import "../../../style/style.scss";
+
+
+.antd-input {
+    &.hasLabel {
+        margin-top: 24px;
+    }
+    label {
+        color: $color-neutral-6;
+    }
+}

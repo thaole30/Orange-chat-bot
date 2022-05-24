@@ -1,2 +1,3 @@
-import RecSvg from "./UserSvg.svg";
-export {RecSvg} 
+import UploadSvg from "./upload.svg";
+import UserSvg from "./user.svg";
+export {UploadSvg, UserSvg} 

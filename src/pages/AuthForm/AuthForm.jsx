@@ -1,20 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import CustomInput from "../../components/FormControl/CustomInput/CustomInput";
 import { RecSvg } from "../../layout/SideBar/svg";
 import * as FormIcon from "./svg/index";
 import "./AuthForm.scss";
 import { Checkbox } from 'antd';
+import CustomButton from "../../components/CustomButton/CustomButton";
+import { useNavigate } from "react-router-dom";
 
 
 const AuthForm = () => {
 
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: '',
+        confirmPassword: '',
+    });
+
+    // const dispatch = useDispatch();
+    const navigate = useNavigate();
+  
+
     const handleChange = (e) => {
         console.log("value field", e.target.value);
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        })
     }
 
     function handleChangeCheckbox(e) {
         console.log(`checked = ${e.target.checked}`);
-      }
+    }
+
+    const handleAuth = (e) => {
+      e.preventDefault();
+      navigate('/profile');
+    }
+
 
   return (
     <div className="auth-form-container">
@@ -78,21 +102,25 @@ const AuthForm = () => {
 
         <span className="logo-text">Orange Bot</span>
       </div>
-      <form className="auth-form">
+      <form className="auth-form" onSubmit={handleAuth}>
         <h2 className="text-center">ログイン</h2>
 
         <CustomInput
+          functionality="auth-form-input"
           name="username"
           label="ユーザー名"
           handleChange={handleChange}
+          placeholder="ユーザー名を入力してください。"
           isIcon={true}
           icon={FormIcon.UserSvg}
         />
 
         <CustomInput
+          functionality="auth-form-input"
           name="password"
           label="パスワード"
           handleChange={handleChange}
+          placeholder="パースワードを入力してください。"
           isIcon={true}
           type="password"
           icon={FormIcon.LockSvg}
@@ -100,7 +128,7 @@ const AuthForm = () => {
 
         <div className="bonus-content">
             <div className="left">
-                <Checkbox onChange={handleChangeCheckbox}>Checkbox</Checkbox>
+                <Checkbox onChange={handleChangeCheckbox}></Checkbox>
                 <p>パースワードを保存</p>
             </div>
 
@@ -108,6 +136,8 @@ const AuthForm = () => {
                 パスワードをお忘れですか？ 
             </div>
         </div>
+
+        <CustomButton type="submit" addedClass="full-width update-style-hover">サインイン</CustomButton>
 
       </form>
     </div>

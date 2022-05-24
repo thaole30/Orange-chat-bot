@@ -1,7 +1,16 @@
 
 $color-orange-primary: #FA8C16;
 $color-neutral-4: #F0F0F0;
+$color-neutral-6: #BFBFBF;
+$color-neutral-5: #D9D9D9;
+$color-character-success: #52C41A;
 $color-white: white;
+$color-blue: #1890FF;
+$container-width: 1095px;
+$container-lg-width: 1184px;
+$text-dark: #080a25;
+$error-color: #f31d1d;
+
 
 $mobile-width: 768px;
 $tablet-width: 992px;
@@ -36,9 +45,3 @@ $fs-24: 24px;
 $fs-32: 32px;
 
 
-$color-login: linear-gradient(
-  180deg,
-  rgba(20, 50, 93, 0.9),
-  rgba(8, 22, 48, 0.9)
-);
-$color-button: #1aafcd;

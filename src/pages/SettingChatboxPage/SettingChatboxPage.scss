@@ -1,0 +1,76 @@
+@import "../../style/style.scss";
+
+.setting-chatbox-page {
+    .left-setting-chatbox {
+        flex: 2;
+        .setting-chatbox-header {
+            padding: 16px;
+            background-color: white;
+            border-radius: 16px;
+            .avatar-container {
+                width: 128px;
+                height: 128px;
+                position: relative;
+                border-radius: 50%;
+                overflow: hidden;
+    
+                img {
+                    border-radius: 50%;
+                }
+    
+                .rectangle {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    background: $color-orange-primary;
+                    padding: 8px;
+                }
+            }
+        }
+        .setting-chatbox-chat {
+            margin-top: 36px;
+            padding: 16px;
+            background-color: white;
+            border-radius: 16px;
+
+        }
+    }
+    
+    .right-setting-chatbox {
+        flex: 1;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+        .chatbox-header {
+            background-color: #025967;
+            border-radius: 10px 10px 0px 0px;
+            padding: 16px;
+        }
+        .chatbox-bottom {
+            padding: 10px;
+            background-color: #929292;
+            input {
+                background: #F3F3F3;
+                padding: 10px;
+                border-radius: 10px;
+                border: 2px solid #D9D9D9;
+            }
+            .plane-icon {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 20px;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                color: #025967;
+            }
+        }
+    }
+    .bottom-chat-box {
+        margin-top: 36px;
+        padding: 16px;
+        background-color: white;
+        border-radius: 16px;
+    }
+}

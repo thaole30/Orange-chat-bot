@@ -1,0 +1,52 @@
+@import "../../style/style.scss";
+
+
+.file-page {
+    .file-statics {
+        display: flex;
+        gap: 24px;
+        &-left {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 20px;
+            .static-item {
+                background: white;
+                display: flex;
+                justify-content: space-between;
+                padding: 16px;
+                align-items: center;
+                border-radius: 8px;
+
+                .static-icon {
+                    width: 60px;
+                    height: 60px;
+                    position: relative;
+
+                    .layout {
+                        height: 100%;
+                        border-radius: 50%;
+                    }
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+
+        &-right {
+            width: 400px;
+            background-color: $color-white;
+        }
+    }
+
+    .file-table {
+        margin-top: 24px;
+    }
+}
