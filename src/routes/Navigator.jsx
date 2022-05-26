@@ -13,13 +13,17 @@ import ScenarioSettingPage from '../pages/ScenarioSettingPage/ScenarioSettingPag
 import CreateScenarioModal from '../pages/ScenarioSettingPage/CreateScenarioModal';
 import EditScenarioModal from '../pages/ScenarioSettingPage/EditScenarioModal';
 import ChartPage from '../pages/Chart/ChartPage';
-import GraphScenario from '../pages/Chart/GraphScenario';
-import GraphCommunicate from '../pages/Chart/GraphCommunicate';
-import Scenario from '../pages/Chart/Scenario';
+import GraphScenario from '../pages/Chart/Scenario/GraphScenario/GraphScenario';
+import GraphCommunicate from '../pages/Chart/Scenario/GraphCommunicate/GraphCommunicate';
+import Scenario from '../pages/Chart/Scenario/Scenario';
 import AuthForm from '../pages/AuthForm/AuthForm';
 import DisplayForm from '../pages/UserProfilePage/DisplayForm';
 import EditForm from '../pages/UserProfilePage/EditForm';
 import CreateTextEditor from '../pages/PostsSettingPage/CreateTextEditor';
+import TableGraph from '../pages/Chart/Scenario/GraphScenario/TableGraph/TableGraph';
+import BarGraph from '../pages/Chart/Scenario/GraphScenario/BarGraph/BarGraph';
+import LineGraph from '../pages/Chart/Scenario/GraphScenario/LineGraph/LineGraph';
+import ColumGraph from '../pages/Chart/Scenario/GraphScenario/ColumGraph/ColumGraph';
 
 
 
@@ -58,7 +62,14 @@ const Navigator = () => {
                 <Route index element={<Navigate to="/chart/scenario" replace />} />
                 <Route path="scenario" element={<Scenario/>} />
                 <Route path="dialogue"element={<GraphCommunicate/>} />
-                <Route path="graph/table"element={<GraphScenario/>} />
+                <Route path="graph"element={<GraphScenario/>} >
+                  <Route index element={<Navigate to="/chart/graph/table" replace />} />
+                  <Route path="table" element={<TableGraph />} />
+                  <Route path="bar" element={<BarGraph />} />
+                  <Route path="line" element={<LineGraph />} />
+                  <Route path="column" element={<ColumGraph />} />
+                  <Route path="*" element={<BarGraph />} />
+                </Route>
             </Route>
 
           </Route>

@@ -75,7 +75,7 @@ const childLinks = [
     childText: "対話履歴",
   },
   {
-    path: "chart/graph/table",
+    path: "chart/graph",
     icons: {
       normal: sidebarSvg.linkchild3,
       active: sidebarSvg.linkchild3Active,
@@ -212,7 +212,7 @@ const SideBar = () => {
                     </div>
                   )}
                   <span>
-                    <img src={Icon} alt="" />
+                    <img style={{width: "20px"}} src={Icon} alt="" />
                   </span>
                   <span className="text-link">{text}</span>
                 </li>

@@ -59,17 +59,16 @@ const ScenarioList = () => {
     },
     {
       title: "タグ",
-      dataIndex: "tag",
+      dataIndex: "tags",
       width: "25%",
       render: (tags) => {
-
         return (
           <Space>
-            {/* {
+            {
               tags.map((tag, index) => {
-                <Tag key={index}>{tag}</Tag>
+                return <Tag key={index} style={{backgroundColor: "#FFF7E6", borderColor: "#FFD591", color: "#FA8C16"}}>{`#${tag}`}</Tag>
               })
-            } */}
+            }
           </Space>
         );
       },

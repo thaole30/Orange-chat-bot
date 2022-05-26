@@ -1,0 +1,23 @@
+@import "../../../style//style.scss";
+
+
+.scenario {
+    .cupon-table-section {
+        background-color: $color-white;
+        border-radius: 16px;
+        padding: 16px;
+
+    }
+    .scenario-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $color-neutral-5;
+    }
+    .secondary-section {
+        background-color: $color-white;
+        border-radius: 16px;
+        padding: 16px;
+
+    }
+}
